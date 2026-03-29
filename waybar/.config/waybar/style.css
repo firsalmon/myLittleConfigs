@@ -76,6 +76,7 @@ window#waybar.empty #window {
 }
 
 #workspaces button.active {
+    background-color: rgba(30, 70, 80, 0.7);
     color: #fab387;
 }
 
@@ -95,7 +96,7 @@ window#waybar.empty #window {
 }
 
 #custom-power {
-    background-color: #dcf5f3;
+    background-color: #202020;
     border-radius: 7px;
     padding: 8px 12px 8px 8px;
     margin: 4px 0;
@@ -118,6 +119,7 @@ window#waybar.empty #window {
 }
 
 #wireplumber {
+    min-width: 60px;
     background-color: #202020;
     border-radius: 4px;
     padding: 8px 8px 8px 20px;
@@ -130,6 +132,7 @@ window#waybar.empty #window {
 }
 
 #clock {
+    min-width: 65px;
     background-color: #202020;
     border-radius: 4px 4px 4px 4px;
     padding: 8px 10px 10px 10px;
@@ -138,6 +141,7 @@ window#waybar.empty #window {
 }
 
 #network {
+    min-width: 30px;
     background-color: #202020;
     color: #cdd6f4;
     border-radius: 4px;
@@ -161,6 +165,7 @@ window#waybar.empty #window {
 }
 
 #battery {
+    min-width: 50px;
     background-color: #202020;
     color: #cdd6f4;
     border-radius: 4px;
@@ -169,6 +174,7 @@ window#waybar.empty #window {
 }
 
 #backlight {
+    min-width: 60px;
     background-color: #202020;
     color: #cdd6f4;
     border-radius: 4px;
