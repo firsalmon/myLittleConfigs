@@ -1,183 +1,69 @@
 * {
     font-family: "0xProto Nerd Font";
-    font-weight: bold;
-    font-size: 12px;
-    border: 2px;
-}
+    }
 
+/* Основной контейнер бара */
 window#waybar {
-    background-color: rgba(0, 0, 0, 0);
+    min-height: 8px;  /* Нужная высота панели (подберите: 16–24 обычно достаточно) */
+    background: rgba(1, 0, 0, 0.7) ; /* Ваш цвет фона */
+    color: #cdd6f4;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
-window > box {
-    /* margin-top: 13px; */
-    margin-bottom: 0px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 0px;
-    padding-left: 4px;
-    padding-right: 4px;
+/* Убираем лишние отступы у всех модулей */
+#waybar * {
+    padding: 0 1px;
+    margin: 0;
 }
 
-#window {
-    color: white;
-    background-color: #202020;
-    border-radius: 7px;
-    padding: 8px 8px 8px 8px;
-    margin: 4px 0;
-}
-
-window#waybar.empty #window {
-    background: rgba(12, 12, 12, 0);
-}
-
-.modules-left {
-    padding: 0px 0px 3px 3px;
-}
-
-.modules-right {
-    padding: 0px 0px 3px 3px;
-}
-
-.modules-center {
-    padding: 0px 0px 3px 3px;
+/* Опционально: уменьшаем шрифт и иконки */
+#waybar .modules-left,
+#waybar .modules-right,
+#waybar .modules-center {
+    font-size: 10px;
 }
 
 #workspaces {
-    background-color: #202020;
-    border-radius: 7px;
-    padding: 4px 4px 4px 6px;
-    margin: 4px 0;
-}
-
-#workspaces button {
-    min-height: 0;
-    padding: 0 7px;
-    margin-right: 2px;
-    color: #f5e0dc;
-}
-
-#workspaces button.urgent {
-    color: #f5e0dc;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-#workspaces button.empty {
-    color: #cdd6f4;
-}
-
-#workspaces button.visible {
-    color: #89dceb;
-}
-
-#workspaces button.active {
-    background-color: rgba(30, 70, 80, 0.7);
-    color: #fab387;
-}
-
-@keyframes blink {
-    to {
-        color: #202020;
-        background-color: #dcf5f3;
-    }
-}
-
-#custom-launcher {
-    background-color: #202020;
-    border-radius: 7px;
-    padding: 8px 8px 8px 4px;
-    margin: 4px 0;
-    color: #89dceb;
-}
-
-#custom-power {
-    background-color: #202020;
-    border-radius: 7px;
-    padding: 8px 12px 8px 8px;
-    margin: 4px 0;
-}
-
-#cpu {
-    background-color: #202020;
-    border-radius: 7px;
-    padding: 8px 8px 8px 20px;
-    margin: 4px 0;
-    color: #f2cdcd;
-}
-
-#memory {
-    background-color: #202020;
-    border-radius: 4px;
-    padding: 8px 8px 8px 20px;
-    margin: 4px 0;
-    color: #fab387;
-}
-
-#wireplumber {
-    min-width: 60px;
-    background-color: #202020;
-    border-radius: 4px;
-    padding: 8px 8px 8px 20px;
-    margin: 4px 0;
-    color: #f9e2af;
-}
-
-#wireplumber.muted {
-    color: #f38ba8;
-}
-
-#clock {
-    min-width: 65px;
-    background-color: #202020;
-    border-radius: 4px 4px 4px 4px;
-    padding: 8px 10px 10px 10px;
-    margin: 4px 0;
-    color: #94e2d5;
-}
-
-#network {
-    min-width: 30px;
-    background-color: #202020;
-    color: #cdd6f4;
-    border-radius: 4px;
-    padding: 8px;
-    margin: 4px 0;
-}
-
-#network.spd {
-    min-width: 150px;
-}
-
-#network.disabled {
-    color: #f38ba8;
+    border: 2px;
+    border-color: rgba(255, 255, 255, 1);
 }
 
 #tray {
-    background-color: #202020;
-    border-radius: 20px;
-    padding: 8px 12px 8px 12px;
-    margin: 4px 0;
+    border: 2px;
+    border-color: rgba(255, 255, 255, 1);
 }
 
-#battery {
-    min-width: 50px;
-    background-color: #202020;
-    color: #cdd6f4;
-    border-radius: 4px;
-    padding: 8px;
-    margin: 4px 0;
+#clock {
+    border: 2px;
+    border-color: rgba(255, 255, 255, 1);
 }
 
-#backlight {
-    min-width: 60px;
-    background-color: #202020;
-    color: #cdd6f4;
-    border-radius: 4px;
-    padding: 8px;
-    margin: 4px 0;
+/* 🔲 Границы для всех основных модулей */
+#battery, #clock, #network, #wireplumber, #backlight,
+#memory, #cpu, #temperature, #disk, #tray, #workspaces, #custom-launcher, #custom-power {
+    margin-left: 1px;
+    margin-right: 1px;
+    border-radius: 5px;
+    border: 1px solid #585b70;
+    padding-left: 2px;
+    padding-right: 2px;
 }
+
+#custom-launcher {
+    min-width: 20px;
+}
+
+#tray {
+    min-width: 20px;
+}
+
+#memory {
+    min-width: 70px;
+}
+
+
+/* 🎨 Опционально: разный цвет границ по зонам */
+.modules-left > *   { border-color: #89b4fa; }
+.modules-center > * { border-color: #cba6f7; }
+.modules-right > *  { border-color: #a6e3a1; }
