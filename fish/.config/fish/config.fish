@@ -1,6 +1,4 @@
-set -g fish_greeting
-
-pokego --nt -s -r 1,1,1
+pokego -r 5 --no-title
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
@@ -8,7 +6,7 @@ end
 
 function clear
   command clear
-  pokego --nt -s -r 1,1,1
+  pokego -r 5 --no-title
 end
 
 function clr
